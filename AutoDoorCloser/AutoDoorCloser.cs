@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using Fougerite;
 using Fougerite.Events;
 using UnityEngine;
@@ -30,7 +29,7 @@ namespace AutoDoorCloser
 
         public override Version Version
         {
-            get { return new Version("1.1"); }
+            get { return new Version("1.2"); }
         }
 
         public override void Initialize()
@@ -67,8 +66,8 @@ namespace AutoDoorCloser
                 var dict = new Dictionary<string, object>();
                 dict["Loc"] = p.Location;
                 dict["Door"] = door;
-                var c = 1000 * i;
-                CreateParallelTimer(c, dict).Start();
+                var delay = 1000 * i;
+                CreateParallelTimer("AutoDoorCloser_" + p.UID, delay, dict, Callback).Start();
             }
         }
 
@@ -94,15 +93,7 @@ namespace AutoDoorCloser
             }
         }
 
-        internal AutoDoorCloserTE CreateParallelTimer(int timeoutDelay, Dictionary<string, object> args)
-        {
-            AutoDoorCloserTE timedEvent = new AutoDoorCloserTE(timeoutDelay);
-            timedEvent.Args = args;
-            timedEvent.OnFire += Callback;
-            return timedEvent;
-        }
-
-        internal void Callback(AutoDoorCloserTE e)
+        private void Callback(TimedEvent e)
         {
             e.Kill();
             var data = e.Args;

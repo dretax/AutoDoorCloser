@@ -32,23 +32,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>E:\Users\DreTaX\Documents\Visual Studio 2013\Projects\FougeriteProject\bin\Assembly-CSharp.dll</HintPath>
+      <HintPath>d:\Projects\NETPlatform\Visual Studio 2013\FougeriteProject\bin\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.ID">
-      <HintPath>E:\Users\DreTaX\Documents\Visual Studio 2013\Projects\FougeriteProject\References\Facepunch.ID.dll</HintPath>
+      <HintPath>d:\Projects\NETPlatform\Visual Studio 2013\FougeriteProject\bin\Facepunch.ID.dll</HintPath>
     </Reference>
     <Reference Include="Fougerite">
-      <HintPath>E:\Users\DreTaX\Documents\Visual Studio 2013\Projects\FougeriteProject\bin\Fougerite.dll</HintPath>
+      <HintPath>d:\Projects\NETPlatform\Visual Studio 2013\FougeriteProject\bin\Fougerite.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="UnityEngine">
-      <HintPath>E:\Users\DreTaX\Documents\Visual Studio 2013\Projects\FougeriteProject\References\UnityEngine.dll</HintPath>
+      <HintPath>d:\Projects\NETPlatform\Visual Studio 2013\FougeriteProject\bin\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoDoorCloser.cs" />
-    <Compile Include="AutoDoorCloserTE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
